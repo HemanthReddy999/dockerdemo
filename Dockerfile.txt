@@ -1,0 +1,10 @@
+# Use the official Nginx image from Docker Hub
+FROM nginx:alpine
+
+# Copy the index.html to the Nginx HTML directory
+COPY index.html /usr/share/nginx/html/index.html
+
+# Expose the port Nginx is running on
+EXPOSE 80
+
+# No need to explicitly define CMD, as Nginx will run by default in the official Nginx image
